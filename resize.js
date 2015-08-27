@@ -12,8 +12,9 @@ var h = function (e) {
       c.height = h;
       c.getContext("2d").drawImage(this, 0, 0, w, h);
       this.src = c.toDataURL();
-      document.body.appendChild(this);
+      //document.body.appendChild(this);
     }
+    console.log(e.target.result);
     img.src = e.target.result;
   }
   fr.readAsDataURL(e.target.files[0]);
